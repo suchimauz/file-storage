@@ -1,0 +1,18 @@
+http:
+  port: 8000
+  maxHeaderBytes: 1
+  readTimeout: 10s
+  writeTimeout: 10s
+
+# TODO: support minio driver
+storage:
+  driver: local
+  bucket: /home/suchimauz/go/src/github.com/suchimauz/file-storage/storage/data
+  # FOR Minio
+  access_key: NULL
+  secret_key: NULL
+  prefix: storage
+
+auth:
+  basic: please:let
+  permissions: r # r, w, r+w (read, write, read+write)
